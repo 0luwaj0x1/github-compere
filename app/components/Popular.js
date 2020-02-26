@@ -101,7 +101,7 @@ export default class Popular extends React.Component {
     this.updatedLanguage(this.state.selectedLanguage);
   }
 
-  updatedLanguage = (selectedLanguage) => {
+  updatedLanguage = selectedLanguage => {
     this.setState({
       selectedLanguage,
       error: null
@@ -124,13 +124,13 @@ export default class Popular extends React.Component {
           });
         });
     }
-  }
+  };
 
   isLoading = () => {
     const { selectedLanguage, repos, error } = this.state;
 
     return !repos[selectedLanguage] && this.state.error === null;
-  }
+  };
 
   render() {
     const { selectedLanguage, error, repos } = this.state;
